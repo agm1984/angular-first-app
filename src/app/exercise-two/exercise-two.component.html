@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <h4>Enter Name & Clear</h4>
+    <label>Enter your name:</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="username"
+    >
+
+    <br>
+    <br>
+    <label>Your name:</label>
+    <span>{{ username }}</span>
+    <br>
+    <br>
+
+    <!-- Could also use (click)="username === ''" -->
+    <button
+      class="btn btn-primary"
+      [disabled]="username === ''"
+      (click)="clearName()"
+    >
+      Clear Name
+    </button>
+
+  </div>
+</div>
+
