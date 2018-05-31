@@ -1,0 +1,15 @@
+<button
+  class="btn btn-primary"
+  (click)="toggleDisplay()"
+>
+  Display Details
+</button>
+<p *ngIf="isDisplayed === true">Secret Password = tuna</p>
+<br><br>
+<div
+  *ngFor="let l of log"
+  [ngStyle]="{ backgroundColor: l.id >= 5 ? 'blue' : 'transparent' }"
+  [ngClass]="{ logPrimary: (l.id >= 5) }"
+>
+  [LOG]({{ l.id }}) Timestamp: {{ l.timestamp }} Value: {{ l.value }}
+</div>
